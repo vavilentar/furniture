@@ -99,10 +99,13 @@
 	}
 
 	.feat-tab {
-		width: 185px;
+		width: 165px;
+		font-size: 16px;
+		line-height: 20px;
 	}
 	.features {
-		width: 95%;
+		width: 80%;
+		gap: 10px;
 	 }
 	
 	 #prod-collection {
