@@ -105,8 +105,16 @@
 	}
 	.features {
 		width: 100%;
-		gap: 10px;
-	 }
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-items: center;
+	}
+	.feat-tab:nth-child(1), .feat-tab:nth-child(3) {
+		justify-self: flex-end;
+	}
+	.feat-tab:nth-child(2), .feat-tab:nth-child(4) {
+		justify-self: flex-start;
+	}
 	
 	 #prod-collection {
 		flex-wrap: wrap;
