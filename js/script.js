@@ -1,4 +1,32 @@
-const prodVBlock = document.getElementById('prod-collection');
+const prodBlock = document.getElementById('prod-collection');
+const nextArrow = document.getElementById('next');
+const prevArrow = document.getElementById('prev');
+
+const positions = [
+	0, 103, 207, 311, 363
+]
+
+let counter = 0;
+
+nextArrow.addEventListener('click', () => {
+	if(counter != 4) {
+		counter++
+		prodBlock.style.transform = `translateX(-${positions[counter]}%)`
+	} else {
+		counter = 0;
+		prodBlock.style.transform = `translateX(-${positions[counter]}%)`
+	}
+})
+
+prevArrow.addEventListener('click', () => {
+	if (counter != 0) {
+		counter--
+		prodBlock.style.transform = `translateX(-${positions[counter]}%)`
+	} else {
+		counter = 4;
+		prodBlock.style.transform = `translateX(-${positions[counter]}%)`
+	}
+})
 
 function createProdElement() {
 	let item = document.createElement('div');
@@ -23,7 +51,7 @@ function createProdElement() {
 
 function fillProbuctionBlock(quantity) {
 	for (let i = 0; i < quantity; i++) {
-		prodVBlock.appendChild(createProdElement())
+		prodBlock.appendChild(createProdElement())
 	}
 }
 

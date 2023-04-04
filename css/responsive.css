@@ -1,0 +1,46 @@
+@media (max-width: 769px) {
+	.navbar {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.menu-link a {
+		font-size: 17px;
+		line-height: 18px;
+	}
+
+	.title {
+		font-size: 46px;
+		margin-left: 25px;
+	}
+
+	.features {
+		width: 70%;
+	}
+
+	#prod-collection {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+	}
+
+	#prev,
+	#next {
+		display: block;
+	}
+
+	.model-item {
+		width: 231px;
+	}
+	.model-info-frame p:nth-child(1) {
+		font-size: 18px;
+	}
+	.model-info-frame p:nth-child(2) {
+		font-size: 15px;
+	}
+	.model-info-frame {
+		gap: 15px;
+	}
+
+	.quest {
+		width: 234px;
+	}
+}

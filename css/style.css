@@ -316,6 +316,7 @@ a:nth-child(2) {
 	justify-content: space-around;
 	margin: 80px auto;
 	flex-wrap: wrap;
+	gap: 25px;
 }
 
 .feat-tab {
@@ -348,7 +349,27 @@ a:nth-child(2) {
 .steps-wrapper {
 	background-image: url(../img/steps-bg.png);
 	background-size: cover;
+}
 
+.production {
+	position: relative;
+	overflow: hidden;
+
+}
+#prev,#next {
+	position: absolute;
+	cursor: pointer;
+	display: none;
+}
+
+#next {
+	top: 100px;
+	right: 25px;
+}
+
+#prev {
+	top: 100px;
+	right: 75px;
 }
 
 .production h2,
@@ -390,11 +411,16 @@ a:nth-child(2) {
 	background: #FFFFFF;
 	box-shadow: 0px 4px 20px rgba(150, 150, 150, 0.25);
 	border-radius: 15px;
+	flex-shrink: 0;
 }
 
 .prod-collection-item img {
 	width: 100%;
 	border-radius: 15px 15px 0px 0px;
+}
+
+.slider-container-transition {
+	transition: transform 0.7s ease-in-out;
 }
 
 .item-frames {
@@ -473,8 +499,8 @@ a:nth-child(2) {
 	margin: 50px auto;
 	display: flex;
 	justify-content: center;
-	column-gap: 50px;
 	flex-wrap: wrap;
+	gap: 25px;
 }
 
 .model-item {
@@ -654,6 +680,7 @@ a:nth-child(2) {
 	align-items: center;
 	justify-items: center;
 	width: 80%;
+	justify-content: center;
 }
 
 .quest:nth-child(2) {
