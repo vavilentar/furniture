@@ -100,7 +100,6 @@ header {
 .navbar-logotype {
 	display: flex;
 	width: fit-content;
-	height: fit-content;
 	height: 100px;
 }
 
@@ -125,10 +124,6 @@ header {
 	text-align: center;
 	line-height: 26px;
 	font-weight: 700;
-}
-
-.logo-text a p {
-	color: var(--main-black-color);
 }
 
 .navbar-item:nth-child(3) img {
