@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,267 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<title>Мебель на заказ от производителя</title>
 </head>
+
 <body>
 	<header>
-		
+		<div class="header">
+			<ul class="navbar navbar__container>
+				<li class=" navbar-item">
+				<div class="navbar-logotype">
+					<div class="logo-text">
+						<a href="./index.html">
+							<h1>Мебель <br> на заказ</h1>
+							<p>по Москве и МО</p>
+						</a>
+					</div>
+					<img class="logo-img" src="./icons/logotype.png" alt="Living room">
+				</div>
+				</li>
+				<li class="navbar-item">
+					<p>
+						Отвечаем на звонки <br> с 9:00 до 21:00 <br> без выходных
+
+					</p>
+				</li>
+				<li class="navbar-item">
+					<img src="./icons/location.png" alt="Location icon">
+					<p>г. Краснодар, <br> ул. Красных <br> Партизан, 483</p>
+				</li>
+				<li class="navbar-item">
+					<button class="btn">Рассчитать стоимость</button>
+				</li>
+				<li class="navbar-item">
+					<a href="tel:+78612179376">+7 (8612) 17-93-76</a>
+					<a href="tel:+79892779430">+7 (989) 277-94-30</a>
+					<a href="#">Вам перезвонить?</a>
+				</li>
+			</ul>
+			<ul class="menu menu__container">
+				<li class="menu-link"><a href="#">Цены</a></li>
+				<li class="menu-link"><a href="#">Акция</a></li>
+				<li class="menu-link"><a href="#">Материалы</a></li>
+				<li class="menu-link"><a href="#">Как заказать</a></li>
+				<li class="menu-link"><a href="#">Наши работы</a></li>
+				<li class="menu-link"><a href="#">Отзывы</a></li>
+				<li class="menu-link"><a href="#">Контакты</a></li>
+			</ul>
+		</div>
+		<section class="hero hero__container">
+			<div class="hero-block">
+				<h2 class="title">Мебель на заказ <br> <span>в Москве и МО</span></h2>
+				<div class="hero-info">
+					<div class="hero-info-item">
+						<img src="./icons/cash.svg" alt="">
+						<p>Цена от <span>19990 ₽ м./п.</span></p>
+					</div>
+					<div class="hero-info-item">
+						<img src="./icons/calendar.svg" alt="">
+						<p>Изготовим от <span> 7 дней</span></p>
+					</div>
+					<div class="hero-info-item">
+						<img src="./icons/varanty.svg" alt="">
+						<p>Гарантия <span>2 года</span></p>
+					</div>
+				</div>
+				<form class="hero-feedback-form" action="#">
+					<h3>Акция</h3>
+					<p>Скидка <span>35%</span> на Вашу кухню</p>
+					<p>до 01.01.2022</p>
+					<div class="inputs">
+						<input required placeholder="Введите номер телефона" type="phone">
+						<button class="btn" type="submit">Получить скидку</button>
+					</div>
+				</form>
+			</div>
+		</section>
 	</header>
-	<main></main>
-	<footer></footer>
+
+	<main>
+		<section class="features features__container">
+			<div class="feat-tab">
+				<img src="./icons/feat-icons/1.svg" alt="">
+				<p>Рассрочка 0% до 12 месяцев</p>
+			</div>
+			<div class="feat-tab">
+				<img src="./icons/feat-icons/2.svg" alt="">
+				<p>Устанавливаем кухни с 2013 года</p>
+			</div>
+			<div class="feat-tab">
+				<img src="./icons/feat-icons/3.svg" alt="">
+				<p>Бесплатная установка</p>
+			</div>
+			<div class="feat-tab">
+				<img src="./icons/feat-icons/4.svg" alt="">
+				<p>Срок службы <br> 20 лет</p>
+			</div>
+		</section>
+		<section class="production-wrapper">
+			<div class="production production__container">
+				<h2 class="title">Какую мебель <br> <span>мы производим?</span></h2>
+				<div id="prod-collection">
+				</div>
+			</div>
+		</section>
+		<section class="find-model find-model__container">
+			<div class="find-model-titles">
+				<h2 class="title">Не нашли нужную модель? <br> <span>Она точно у нас есть!</span></h2>
+				<div>
+					<p>Мы установили более <span>3000</span> кухонь на заказ!</p>
+					<p>Получите подробный каталог</p>
+				</div>
+			</div>
+			<div id="find-collection">
+				<div class="model-item">
+					<img src="./img/furn-images/1.JPG" alt="">
+					<div class="model-info-frame">
+						<p>Современные стеллажи</p>
+						<p>У нас более <span>650</span> моделей современных стеллажей.</p>
+						<button class="btn">Получить каталог</button>
+					</div>
+				</div>
+				<div class="model-item">
+					<img src="./img/furn-images/1.JPG" alt="">
+					<div class="model-info-frame">
+						<p>Современные стеллажи</p>
+						<p>У нас более <span>650</span> моделей современных стеллажей.</p>
+						<button class="btn">Получить каталог</button>
+					</div>
+				</div>
+				<div class="model-item">
+					<img src="./img/furn-images/1.JPG" alt="">
+					<div class="model-info-frame">
+						<p>Современные стеллажи</p>
+						<p>У нас более <span>650</span> моделей современных стеллажей.</p>
+						<button class="btn">Получить каталог</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="steps-wrapper">
+			<div class="steps steps__container">
+				<h2 class="title">5 шагов к Вашей <br> <span>идеальной мебели</span></h2>
+				<div class="steps-tabs">
+					<div class="step">
+						<img src="./img/steps/1.png" alt="">
+						<div class="step-title">
+							<img src="./icons/steps/1.svg" alt="">
+							<h3>Заявка</h3>
+						</div>
+						<p><a href="#">Вы оставляете заявку</a> или звоните нам  <a href="tel:+79892779430">+7 (989) 277-94-30</a> Наш специалист подробно расскажет Вам об особенностях наших кухонь, вариантах оплаты и ее установки.</p>
+					</div>
+				
+					<div class="step">
+						<img src="./img/steps/2.png" alt="">
+						<div class="step-title">
+							<img src="./icons/steps/2.svg" alt="">
+							<h3>Консультация дизайнера </h3>
+						</div>
+						<p>Наши дизайнеры с 9:00 до 21: 00 помогут Вам подобрать идеальную кухню, проведут замер, сделают проект и рассчитают стоимость.</p>
+					</div>
+				
+					<div class="step">
+						<img src="./img/steps/3.png" alt="">
+						<div class="step-title">
+							<img src="./icons/steps/3.svg" alt="">
+							<h3>Заявка</h3>
+						</div>
+						<p>Подписываем договор, выдаем чек, оформляем рассрочку, согласовываем удобное для Вас время доставки и сборки.</p>
+					</div>
+				
+					<div class="step">
+						<img src="./img/steps/4.png" alt="">
+						<div class="step-title">
+							<img src="./icons/steps/4.svg" alt="">
+							<h3>Доставка и сборка мебели</h3>
+						</div>
+						<p>Привезем Вашу мебель, соберем и установим. Время работ зависит от выбранного Вами материала и перечня дополнительных работ. По окончанию сборки делаем уборку, выносим мусор.</p>
+					</div>
+				
+					<div class="step">
+						<img src="./img/steps/5.png" alt="">
+						<div class="step-title">
+							<img src="./icons/steps/5.svg" alt="">
+							<h3>Поздравляем! <br> Ваша мебель готова!</h3>
+						</div>
+						<p>Теперь вы можете наслаждаться временем проведенным с семьей с Вашей новой мебелью.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="why-us why-us__container">
+			<h2 class="title">Почему выбирают <span>нашу мебель?</span></h2>
+			<div class="why-us-tabs">
+				<div class="why-us-tab">
+					<img src="./img/why-us/1.png" alt="">
+					<div class="why-us-title">
+						<h3>Современные фасады</h3>
+					</div>
+					<p>Наши фасады на <span>40% </span> долговечнее обычных, так как они влагоустойчивы и не подвержены повреждениям. В наличии более <span>250</span> фактур и <span>2000</span> оттенков.</p>
+				</div>
+				<div class="why-us-tab">
+					<img src="./img/why-us/2.png" alt="">
+					<div class="why-us-title">
+						<h3>Прочные столешницы</h3>
+					</div>
+					<p>Наши столешницы на <span>25%</span> прочнее и в <span>2</span> раза влагоустойчивее чем обычные. В наличии <span>10</span> покрытий и <span>170</span> вариантов расцветок и фактур.</p>
+				</div>
+				<div class="why-us-tab">
+					<img src="./img/why-us/3.png" alt="">
+					<div class="why-us-title">
+						<h3>Долговечная и функциональная фурнитура</h3>
+					</div>
+					<p>Выдерживает более <span>20</span> лет службы. Создает максимальный комфорт и удобство пользования кухней.</p>
+				</div>
+				<div class="why-us-tab">
+					<img src="./img/why-us/4.png" alt="">
+					<div class="why-us-title">
+						<h3>Полный комплект документов</h3>
+					</div>
+					<p>Вы получите: договор, кассовый чек, гарантийный талон и правила эксплуатации. Это гарантирует защиту Ваших прав.</p>
+				</div>
+				<div class="why-us-tab">
+					<img src="./img/why-us/5.png" alt="">
+					<div class="why-us-title">
+						<h3>Опытные и вежливые сборщики</h3>
+					</div>
+					<p>Наши сборщики вежливы и аккуратны. Соберут, установят и вынесут строительный мусор. Имеют стаж работы с кухнями  не менее <span>6</span> лет.</p>
+				</div>
+				<div class="why-us-tab">
+					<img src="./img/why-us/6.png" alt="">
+					<div class="why-us-title">
+						<h3>Бесплатная доставка и сборка кухни</h3>
+					</div>
+					<p>Мы бесплатно доставим, соберем и установим Вашу кухню в любой точке Краснодара.</p>
+				</div>
+				
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="wrapper-footer">
+				<div class="footer footer__container">
+					<div class="contacts">
+						<h3>Контакты</h3>
+						<p><span>Адрес:</span>
+							355737, Ярославская область, город Чехов, пр. Бухарестская, 92
+						</p>
+						<p><span>Телефон:</span>
+							<a href="tel:+79224865191">+7 (922) 486-5191</a>
+						</p>
+						<p><span>Электронная почта: </span><a
+								href="mailto:jondricka@gmail.com">jondricka@gmail.com</a></p>
+						<p><span>Режим работы:</span> ежедневно с 11-00 до 20-00</p>
+					</div>
+					<div class="map">
+						<script type="text/javascript" charset="utf-8" async
+							src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae6289cdacab6153aa52be24a51c878082239bc07e273511e1726abf5b9026c59&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+						</script>
+					</div>
+				</div>
+		</div>
+	</footer>
+
+	<script src="./js/script.js"></script>
 </body>
+
 </html>
