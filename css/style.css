@@ -101,10 +101,11 @@ header {
 	display: flex;
 	width: fit-content;
 	height: 100px;
+	align-items: center;
 }
 
 .navbar-logotype img {
-	height: 90%;
+	height: 70%;
 	width: auto;
 }
 
@@ -127,8 +128,12 @@ header {
 	text-align: center;
 }
 
+.navbar-item:nth-child(2) p span{
+	color: var(--main-red-color)
+}
+
 .navbar-item:nth-child(3) img {
-	height: 90%;
+	height: 60%;
 	width: auto;
 }
 
@@ -376,14 +381,16 @@ a:nth-child(2) {
 .production h2,
 .find-model h2,
 .steps h2,
-.why-us h2 {
+.why-us h2,
+.mat h2 {
 	position: relative;
 }
 
 .production h2::after,
 .find-model h2::after,
 .steps h2::after,
-.why-us h2::after {
+.why-us h2::after,
+.mat h2::after {
 	position: absolute;
 	content: '';
 	width: 75px;
@@ -395,7 +402,7 @@ a:nth-child(2) {
 
 
 #prod-collection {
-	margin: 60px auto;
+	margin: 80px auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -497,7 +504,7 @@ a:nth-child(2) {
 }
 
 #find-collection {
-	margin: 50px auto;
+	margin: 80px auto;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -597,7 +604,7 @@ a:nth-child(2) {
 	gap: 25px;
 	justify-content: center;
 	height: fit-content;
-	padding: 80px 0;
+	margin: 60px auto;
 }
 
 .why-us-tab {
@@ -675,7 +682,7 @@ a:nth-child(2) {
 
 .questions-block {
 	height: 338px;
-	margin: 90px auto;
+	margin: 80px auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	align-items: center;
@@ -721,4 +728,43 @@ a:nth-child(2) {
 
 .designer img {
 	width: 100%;
+}
+
+.materials {
+	width: 100%;
+	display: flex;
+	padding: 0 20px;
+	margin: 80px auto;
+}
+.slide {
+	height: 60vh;
+	border-radius: 15px;
+	margin: 10px;
+	cursor: pointer;
+	color: #fff;
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	transition: all 500ms ease-in-out;
+}
+.slide h3 {
+	position: absolute;
+	font-size: 24px;
+	bottom: 20px;
+	left: 20px;
+	margin: 0;
+	opacity: 0;
+	text-shadow: 1px 1px 2px black;
+	color: white;
+}
+
+.slide.active {
+	flex: 10;
+}
+
+.slide.active h3{
+	opacity: 1;
+	transition: opacity .3s ease-in .4s;
 }

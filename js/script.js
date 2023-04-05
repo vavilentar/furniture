@@ -8,6 +8,20 @@ const positions = [
 
 let counter = 0;
 
+const slides = document.querySelectorAll('.slide')
+slides.forEach(item => {
+	item.addEventListener('click', (e) => {
+		clearActiveClasses()
+		item.classList.add('active')
+	})
+})
+
+function clearActiveClasses() {
+	slides.forEach((item) => {
+		item.classList.remove('active')
+	})
+}
+
 nextArrow.addEventListener('click', () => {
 	if(counter != 4) {
 		counter++
