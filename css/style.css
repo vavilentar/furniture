@@ -576,7 +576,6 @@ a:nth-child(2) {
 .why-us-title {
 	display: flex;
 	align-items: center;
-	margin-left: 15px;
 	width: 100%;
 	column-gap: 15px;
 }
@@ -586,6 +585,7 @@ a:nth-child(2) {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 115%;
+	margin: 0 15px;
 }
 
 .step p,
@@ -594,7 +594,7 @@ a:nth-child(2) {
 	font-size: 14px;
 	line-height: 160%;
 	width: 274px;
-	margin-left: 15px;
+	margin: 0 15px;
 }
 
 .steps-tabs,
@@ -767,4 +767,9 @@ a:nth-child(2) {
 .slide.active h3{
 	opacity: 1;
 	transition: opacity .3s ease-in .4s;
+}
+
+.subtitle {
+	font-size: 1.5em;
+	text-align: center;
 }
