@@ -85,7 +85,7 @@ header {
 	display: grid;
 	align-items: center;
 	justify-items: center;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .navbar-item {
@@ -128,19 +128,6 @@ header {
 	text-align: center;
 }
 
-.navbar-item:nth-child(2) p span{
-	color: var(--main-red-color)
-}
-
-.navbar-item:nth-child(3) img {
-	height: 60%;
-	width: auto;
-}
-
-.navbar-item:nth-child(3) {
-	column-gap: 15px;
-}
-
 .btn {
 	padding: 17px 18px;
 	background-color: var(--main-red-color);
@@ -151,12 +138,12 @@ header {
 	line-height: 100%;
 }
 
-.navbar-item:nth-child(5) {
+.navbar-item:nth-child(4) {
 	flex-direction: column;
 	row-gap: 5px;
 }
 
-.navbar-item:nth-child(5) a:nth-child(3),
+.navbar-item:nth-child(4) a:nth-child(3),
 .step p a {
 	color: var(--main-red-color);
 	text-decoration: underline;
@@ -319,7 +306,7 @@ a:nth-child(2) {
 
 .features {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	margin: 80px auto;
 	flex-wrap: wrap;
 	gap: 25px;
@@ -578,6 +565,7 @@ a:nth-child(2) {
 	align-items: center;
 	width: 100%;
 	column-gap: 15px;
+	margin-left: 15px;
 }
 
 .step-title h3,
