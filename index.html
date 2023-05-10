@@ -106,44 +106,33 @@
 							</div>
 							<div class="item-btns-frame">
 								<p>Цена: <span> от 19 990 м./п</span></p>
-								<button :id="'categoryBTN-'+(index)" class="btn category-btn">Подробнее</button>
+								<button :id="'categoryBTN-'+(index)" class="btn category-btn"><a
+										href="./pages/items.html">Подробнее</a></button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="mat mat__container">
+		<section id="materials_app" class="mat mat__container">
 			<h2 class="title">Какие <span>материалы</span> <br> мы используем</h2>
 			<br><br><br>
 			<p class="subtitle">Мы используем только высококачественные материалы и современное оборудование, чтобы
 				создавать мебель, которая будет радовать вас своей красотой и функциональностью на протяжении многих
 				лет.</p>
-			<div class="materials materials__container">
-				<div class="slide active"
-					style="background-image: url('https://isaloni.su/800/600/https/www.infothek-biomasse.ch/images/396_2015_AEE_Suisse_Holz_erneuerbarer_Rohstoff_mit_Potenzial2.jpg');">
-					<h3>Материал 1</h3>
+			<div class="materials">
+				<div v-for="(item, index) in materialsList"  class="materials-item" >
+					<div class="material-name">
+						<h3>{{ item.name }}</h3>
+					</div>
+					<div class="material-descr">
+						<p>{{ item.descr }}</p>
+					</div>
 				</div>
-				<div class="slide" style="
-					   background-image: url('https://www.kuikenbrothers.com/wp-content/uploads/KUIKEN-BROTHERS-SIBERIAN-LARCH-2-1400x600.jpg');
-					 ">
-					<h3>Материал 2</h3>
-				</div>
-				<div class="slide" style="
-					   background-image: url('https://takprosto.cc/wp-content/uploads/c/ceny-na-stroitelnye-materialy/3.jpg');
-					 ">
-					<h3>Материал 3</h3>
-				</div>
-				<div class="slide" style="
-					   background-image: url('https://www.needpix.com/file_download.php?url=https://storage.needpix.com/rsynced_images/wood-3305350_1280.jpg');
-					 ">
-					<h3>Материал 4</h3>
-				</div>
-				<div class="slide" style="
-					   background-image: url('https://www.higgs.ch/wp-content/uploads/2018/03/wood-2718186_1920.jpg');
-					 ">
-					<h3>Материал 5</h3>
-				</div>
+			</div>
+			<button class="btn">И другие...</button>
+			<div class="materials-short">
+				<p v-for="item in materialsListShort" >{{ item }}</p>
 			</div>
 
 		</section>

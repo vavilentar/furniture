@@ -8,31 +8,51 @@ const categoriesApp = {
 	}
 }
 
+
+const materialsApp = {
+	data() {
+		return {
+			materialsList: [
+				{
+					name: 'Мебель из дуба',
+					descr: 'Дуб - это твердое и прочное древесное вещество, которое широко используется в производстве мебели. Он имеет высокую плотность и твердость, что делает его идеальным материалом для изготовления мебели, которая должна быть прочной и долговечной.'
+				},
+				{
+					name: 'Мебель из ореха',
+					descr: ' Ореховое дерево имеет темно-коричневый цвет и красивую текстуру, что делает его очень привлекательным для изготовления мебели. Ореховое дерево обычно используется для изготовления мебели высокого качества, такой как шкафы, комоды, столы и стулья. Оно также может использоваться для изготовления дверей и оконных рам.'
+				},
+				{
+					name: 'Мебель из стекла',
+					descr: 'Одним из основных методов изготовления мебели из стекла является термическое закаливание. Этот процесс заключается в нагреве стекла до высокой температуры, а затем быстром охлаждении. Это позволяет увеличить прочность и устойчивость стекла к механическим воздействиям.'
+				},
+				{
+					name: 'Мебель из камня',
+					descr: 'Камень - это твердый и прочный материал, который может использоваться в производстве мебели. Для изготовления мебели из камня используются специальные технологии и оборудование.'
+				},
+			],
+			materialsListShort: [
+				'Сосна', 'Ель', 'Береза', 'Лиственница', 'Ясень', 'Бук'
+			]
+		}
+	}
+}
+
 Vue.createApp(categoriesApp).mount('#categories_app');
+Vue.createApp(materialsApp).mount('#materials_app');
+
 const categoriesBtns = document.querySelectorAll('.category-btn');
 const categoriesItems = document.querySelectorAll('.categories_app-item');
 
+let selectedCategory = 0;
+
 function parseId(id) {
+	console.log(id)
 	return id.split('-')[1];
 }
 
 categoriesBtns.forEach(btn => {
 	btn.addEventListener('click', (e) => {
-		console.log(parseId(e.target.id))
-		console.log(categoriesItems[parseId(e.target.id)].id)
+		selectedCategory = parseId(e.target.id);
 	})
 })
 
-const slides = document.querySelectorAll('.slide')
-slides.forEach(item => {
-	item.addEventListener('click', (e) => {
-		clearActiveClasses()
-		item.classList.add('active')
-	})
-})
-
-function clearActiveClasses() {
-	slides.forEach((item) => {
-		item.classList.remove('active')
-	})
-}
