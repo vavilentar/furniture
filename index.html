@@ -18,10 +18,13 @@
 				<div class="navbar-logotype">
 					<div class="logo-text">
 						<a href="./index.html">
-							<h1>Mebelliz</h1>
+							<h2>Mebelliz</h2>
 						</a>
 					</div>
 				</div>
+				</li>
+				<li class="navbar-item">
+					<button class="btn">Каталог</button>
 				</li>
 				<li class="navbar-item">
 					<p>
@@ -29,7 +32,8 @@
 					</p>
 				</li>
 				<li class="navbar-item">
-					<button class="btn">Рассчитать стоимость</button>
+					<a href="#">WhatsApp</a>
+					<a href="#">Telegram</a>
 				</li>
 				<li class="navbar-item">
 					<a href="tel:+78612179376">+7 (8612) 17-93-76</a>
@@ -39,22 +43,24 @@
 			</ul>
 			<ul class="menu menu__container">
 				<li class="menu-link"><a href="#">Материалы</a></li>
-				<li class="menu-link"><a href="#">Как заказать</a></li>
 				<li class="menu-link"><a href="#">Наши работы</a></li>
+				<li class="menu-link"><a href="#">Как заказать</a></li>
+				<li class="menu-link"><a href="#">Дизайнерам</a></li>
 				<li class="menu-link"><a href="#">Контакты</a></li>
 			</ul>
 		</div>
 		<section class="hero hero__container">
 			<div class="hero-block">
-				<h2 class="title">Мебель на заказ <br> <span>в Москве и МО</span></h2>
+				<h1 class="title">Мебель на заказ <br> <span>в Москве и МО</span></h1>
+				<h2 class="hero-descr">Изготовление мебели и <br> <span>дизайнерских проектов</span></h2>
 				<div class="hero-info">
 					<div class="hero-info-item">
 						<img src="./icons/cash.svg" alt="">
-						<p>Цена от <span>19990 ₽ м./п.</span></p>
+						<p>Цены от <span>производителя</span></p>
 					</div>
 					<div class="hero-info-item">
 						<img src="./icons/varanty.svg" alt="">
-						<p>Гарантия <span>2 года</span></p>
+						<p>Гарантия <span>2.5 года</span></p>
 					</div>
 				</div>
 				<form class="hero-feedback-form" action="#">
@@ -71,77 +77,77 @@
 
 	<main>
 		<section class="features features__container">
-			<p class="subtitle">Добро пожаловать в нашу компанию, занимающуюся производством и продажей мебели! <br> Мы рады предложить вам широкий ассортимент мебели для дома, офиса и других помещений.</p>
+			<p class="subtitle">Добро пожаловать в нашу компанию, занимающуюся производством и продажей мебели! <br>
+				Мы рады предложить вам широкий ассортимент мебели для дома, офиса и других помещений.</p>
 			<div class="feat-tab">
 				<img src="./icons/feat-icons/2.svg" alt="">
-				<p>Изготавливаем мебель с 2013 года</p>
+				<p>Изготавливаем мебель с 2008 года</p>
 			</div>
 			<div class="feat-tab">
 				<img src="./icons/feat-icons/3.svg" alt="">
-				<p>Установка 10% от</p>
+				<p>Установка 10% <br> от стоимости изделия</p>
 			</div>
 			<div class="feat-tab">
 				<img src="./icons/feat-icons/4.svg" alt="">
 				<p>Срок службы <br> 20 лет</p>
 			</div>
 		</section>
-		<section class="production-wrapper">
-			<div class="production production__container">
-				<h2 class="title">Какую мебель <br> <span>мы производим?</span></h2> 
+		<section class="categories-wrapper">
+			<div class="categories categories__container">
+				<h2 class="title">Какую мебель <br> <span>мы производим?</span></h2>
 				<br><br><br>
-				<img src="./icons/arrow-left.svg" alt="" id="prev">
-				<img src="./icons/arrow-right.svg" alt="" id="next">
-				<div id="prod-collection" class="slider-container-transition">
+				<div id="categories_app">
+					<div v-for="(item, index) in categoriesList" :id="'categoryID-'+(index)"
+						class="categories_app-item">
+						<img src="./img/furn-images/1.JPG" alt="">
+						<div class="item-frames">
+							<div class="item-info-frame">
+								<p><span>{{ item }} </span></p>
+							</div>
+							<div class="item-btns-frame">
+								<p>Цена: <span> от 19 990 м./п</span></p>
+								<button :id="'categoryBTN-'+(index)" class="btn category-btn">Подробнее</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="mat mat__container">
-			<h2 class="title">Какие  <span>материалы</span> <br> мы используем</h2>
+			<h2 class="title">Какие <span>материалы</span> <br> мы используем</h2>
 			<br><br><br>
-			<p class="subtitle">Мы используем только высококачественные материалы и современное оборудование, чтобы создавать мебель, которая будет радовать вас своей красотой и функциональностью на протяжении многих лет.</p>
+			<p class="subtitle">Мы используем только высококачественные материалы и современное оборудование, чтобы
+				создавать мебель, которая будет радовать вас своей красотой и функциональностью на протяжении многих
+				лет.</p>
 			<div class="materials materials__container">
-				<div
-				    class="slide active"
-				    style="background-image: url('https://isaloni.su/800/600/https/www.infothek-biomasse.ch/images/396_2015_AEE_Suisse_Holz_erneuerbarer_Rohstoff_mit_Potenzial2.jpg');"
-				>
-				  <h3>Материал 1</h3>
+				<div class="slide active"
+					style="background-image: url('https://isaloni.su/800/600/https/www.infothek-biomasse.ch/images/396_2015_AEE_Suisse_Holz_erneuerbarer_Rohstoff_mit_Potenzial2.jpg');">
+					<h3>Материал 1</h3>
 				</div>
-				<div
-				    class="slide"
-				    style="
+				<div class="slide" style="
 					   background-image: url('https://www.kuikenbrothers.com/wp-content/uploads/KUIKEN-BROTHERS-SIBERIAN-LARCH-2-1400x600.jpg');
-					 "
-				>
-				  <h3>Материал 2</h3>
+					 ">
+					<h3>Материал 2</h3>
 				</div>
-				<div
-				    class="slide"
-				    style="
+				<div class="slide" style="
 					   background-image: url('https://takprosto.cc/wp-content/uploads/c/ceny-na-stroitelnye-materialy/3.jpg');
-					 "
-				>
-				  <h3>Материал 3</h3>
+					 ">
+					<h3>Материал 3</h3>
 				</div>
-				<div
-				    class="slide"
-				    style="
+				<div class="slide" style="
 					   background-image: url('https://www.needpix.com/file_download.php?url=https://storage.needpix.com/rsynced_images/wood-3305350_1280.jpg');
-					 "
-				>
-				  <h3>Материал 4</h3>
+					 ">
+					<h3>Материал 4</h3>
 				</div>
-				<div
-				    class="slide"
-				    style="
+				<div class="slide" style="
 					   background-image: url('https://www.higgs.ch/wp-content/uploads/2018/03/wood-2718186_1920.jpg');
-					 "
-				>
-				  <h3>Материал 5</h3>
+					 ">
+					<h3>Материал 5</h3>
 				</div>
-			   </div>
-			   
+			</div>
+
 		</section>
-		<section class="find-model find-model__container">
+		<!-- <section class="find-model find-model__container">
 			<div class="find-model-titles">
 				<h2 class="title">Не нашли нужную модель? <br> <span>Она точно у нас есть!</span></h2>
 				<div>
@@ -175,7 +181,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<section class="steps-wrapper">
 			<div class="steps steps__container">
 				<h2 class="title">5 шагов к Вашей <br> <span>идеальной мебели</span></h2>
@@ -186,36 +192,41 @@
 							<img src="./icons/steps/1.svg" alt="">
 							<h3>Заявка</h3>
 						</div>
-						<p><a href="#">Вы оставляете заявку</a> или звоните нам  <a href="tel:+79892779430">+7 (989) 277-94-30</a> Наш специалист подробно расскажет Вам об особенностях нашей мебели, вариантах оплаты и ее установки.</p>
+						<p><a href="#">Вы оставляете заявку</a> или звоните нам <a href="tel:+79892779430">+7
+								(989) 277-94-30</a> Наш специалист подробно расскажет Вам об особенностях нашей
+							мебели, вариантах оплаты и ее установки.</p>
 					</div>
-				
+
 					<div class="step">
 						<img src="./img/steps/2.png" alt="">
 						<div class="step-title">
 							<img src="./icons/steps/2.svg" alt="">
 							<h3>Консультация дизайнера </h3>
 						</div>
-						<p>Наши дизайнеры с 9:00 до 21: 00 помогут Вам подобрать идеальную мебель, проведут замер, сделают проект и рассчитают стоимость.</p>
+						<p>Наши дизайнеры с 9:00 до 21: 00 помогут Вам подобрать идеальную мебель.</p>
 					</div>
-				
+
 					<div class="step">
 						<img src="./img/steps/3.png" alt="">
 						<div class="step-title">
 							<img src="./icons/steps/3.svg" alt="">
 							<h3>Заявка</h3>
 						</div>
-						<p>Подписываем договор, выдаем чек, оформляем рассрочку, согласовываем удобное для Вас время доставки и сборки.</p>
+						<p>Подписываем договор, выдаем чек, оформляем рассрочку, согласовываем удобное для Вас
+							время доставки и сборки.</p>
 					</div>
-				
+
 					<div class="step">
 						<img src="./img/steps/4.png" alt="">
 						<div class="step-title">
 							<img src="./icons/steps/4.svg" alt="">
 							<h3>Доставка и сборка мебели</h3>
 						</div>
-						<p>Привезем Вашу мебель, соберем и установим. Время работ зависит от выбранного Вами материала и перечня дополнительных работ. По окончанию сборки делаем уборку, выносим мусор.</p>
+						<p>Привезем Вашу мебель, соберем и установим. Время работ зависит от выбранного Вами
+							материала и перечня дополнительных работ. По окончанию сборки делаем уборку, выносим
+							мусор.</p>
 					</div>
-				
+
 					<div class="step">
 						<img src="./img/steps/5.png" alt="">
 						<div class="step-title">
@@ -235,44 +246,44 @@
 					<div class="why-us-title">
 						<h3>Современные фасады</h3>
 					</div>
-					<p>Наши фасады на <span>40% </span> долговечнее обычных, так как они влагоустойчивы и не подвержены повреждениям. В наличии более <span>250</span> фактур и <span>2000</span> оттенков.</p>
+					<p>Наши фасады на <span>40% </span> долговечнее обычных, так как они влагоустойчивы и не
+						подвержены повреждениям. В наличии более <span>250</span> фактур и <span>2000</span>
+						оттенков.</p>
 				</div>
 				<div class="why-us-tab">
 					<img src="./img/why-us/2.png" alt="">
 					<div class="why-us-title">
 						<h3>Прочные столешницы</h3>
 					</div>
-					<p>Наши столешницы на <span>25%</span> прочнее и в <span>2</span> раза влагоустойчивее чем обычные. В наличии <span>10</span> покрытий и <span>170</span> вариантов расцветок и фактур.</p>
+					<p>Наши столешницы на <span>25%</span> прочнее и в <span>2</span> раза влагоустойчивее чем
+						обычные. В наличии <span>10</span> покрытий и <span>170</span> вариантов расцветок и
+						фактур.</p>
 				</div>
 				<div class="why-us-tab">
 					<img src="./img/why-us/3.png" alt="">
 					<div class="why-us-title">
 						<h3>Долговечная и функциональная фурнитура</h3>
 					</div>
-					<p>Выдерживает более <span>20</span> лет службы. Создает максимальный комфорт и удобство пользования мебелью.</p>
+					<p>Выдерживает более <span>20</span> лет службы. Создает максимальный комфорт и удобство
+						пользования мебелью.</p>
 				</div>
 				<div class="why-us-tab">
 					<img src="./img/why-us/4.png" alt="">
 					<div class="why-us-title">
 						<h3>Полный комплект документов</h3>
 					</div>
-					<p>Вы получите: договор, кассовый чек, гарантийный талон и правила эксплуатации. Это гарантирует защиту Ваших прав.</p>
+					<p>Вы получите: договор, кассовый чек, гарантийный талон и правила эксплуатации. Это
+						гарантирует защиту Ваших прав.</p>
 				</div>
 				<div class="why-us-tab">
 					<img src="./img/why-us/5.png" alt="">
 					<div class="why-us-title">
 						<h3>Опытные и вежливые сборщики</h3>
 					</div>
-					<p>Наши сборщики вежливы и аккуратны. Соберут, установят и вынесут строительный мусор. Имеют стаж работы с мебелью  не менее <span>6</span> лет.</p>
+					<p>Наши сборщики вежливы и аккуратны. Соберут, установят и вынесут строительный мусор. Имеют
+						стаж работы с мебелью не менее <span>6</span> лет.</p>
 				</div>
-				<div class="why-us-tab">
-					<img src="./img/why-us/6.png" alt="">
-					<div class="why-us-title">
-						<h3>Бесплатная доставка и сборка мебели</h3>
-					</div>
-					<p>Мы бесплатно доставим, соберем и установим Вашу мебель в любой точке Краснодара.</p>
-				</div>
-			</div> 
+			</div>
 		</section>
 		<section class="questions questions__container">
 			<h2 class="title">Остались вопросы? — <br> <span>С радостью ответим на них!</span></h2>
@@ -294,20 +305,21 @@
 	</main>
 	<footer>
 		<div class="wrapper-footer">
-				<div class="footer footer__container">
-					<div class="contacts">
-						<h3>Контакты</h3>
-						<p><span>Телефон:</span>
-							<a href="tel:+79224865191">+7 (922) 486-5191</a>
-						</p>
-						<p><span>Электронная почта: </span><a
-								href="mailto:jondricka@gmail.com">jondricka@gmail.com</a></p>
-						<p><span>Режим работы:</span> ежедневно с 11-00 до 20-00</p>
-					</div>
+			<div class="footer footer__container">
+				<div class="contacts">
+					<h2>Индвидуальная мебель на заказ</h2>
+					<h4>Контакты:</h4>
+					<a href="tel:+79224865191">+7 (922) 486-5191</a>
+					<a href="#">WhatsApp</a>
+					<a href="#">Telegram</a>
+					<a href="mailto:jondricka@gmail.com">jondricka@gmail.com</a>
+					<p><span>Режим работы:</span> ежедневно с 11-00 до 20-00</p>
 				</div>
+			</div>
 		</div>
 	</footer>
 
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="./js/script.js"></script>
 </body>
 
