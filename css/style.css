@@ -160,7 +160,7 @@ header {
 	row-gap: 5px;
 }
 
-.navbar-item:nth-child(5) a:nth-child(3),
+.navbar-item:nth-child(5) a:nth-child(2),
 .step p a {
 	color: var(--main-color);
 	text-decoration: underline;

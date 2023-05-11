@@ -12,14 +12,14 @@ $mail->CharSet = 'utf-8';
 // $mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
+$mail->Host = 'ssl://mail.mebelliz.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'epos.91@mail.ru';                 // Наш логин
-$mail->Password = 'vMXpMXG0dWUJBysM6jpf';                           // Наш пароль от ящика
+$mail->Username = 'info@mebelliz.ru';                 // Наш логин
+$mail->Password = 'PMrKi3dASn5Z';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('epos.91@mail.ru', 'Заявка с сайта');   // От кого письмо 
+$mail->setFrom('info@mebelliz.ru', 'Заявка с сайта');   // От кого письмо 
 $mail->addAddress('i@rpchelkin.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
