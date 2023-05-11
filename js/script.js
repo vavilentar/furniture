@@ -39,11 +39,16 @@ const materialsApp = {
 Vue.createApp(categoriesApp).mount('#categories_app');
 Vue.createApp(materialsApp).mount('#materials_app');
 
-const formWrapper = document.getElementById('form-wrapper');
-formWrapper.addEventListener('click', () => {
+const closeFormBtn = document.getElementById('close-form_btn').addEventListener('click', () => {
 	document.getElementById('callback').classList.add('callback-form_hidden');
 	formWrapper.classList.add('callback-form_hidden');
 })
+
+const formWrapper = document.getElementById('form-wrapper');
+// formWrapper.addEventListener('click', () => {
+// 	document.getElementById('callback').classList.add('callback-form_hidden');
+// 	formWrapper.classList.add('callback-form_hidden');
+// })
 
 const categoriesBtns = document.querySelectorAll('.category-btn');
 const categoriesItems = document.querySelectorAll('.categories_app-item');
