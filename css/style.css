@@ -69,9 +69,7 @@ button:hover {
 /*Other styles*/
 
 header {
-	/* background-image: url(../img/bg.jpg); */
-	background-position: top;
-	background-size: cover;
+
 }
 
 .header {
@@ -877,7 +875,7 @@ a:nth-child(2) {
 #form-wrapper {
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(1,1,1,.5);
+	background-color: rgba(1, 1, 1, .5);
 	position: fixed;
 	left: 0;
 	top: 0;
