@@ -4,7 +4,6 @@ $name = $_POST['client-name'];
 $phone = $_POST['client-phone'];
 $email = $_POST['client-mail'];
 $comment = $_POST['client-request'];
-$messendger = $_POST['messendger'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -36,7 +35,6 @@ $mail->Body    = '
 	<b>Имя:</b> ' . $name . ' <br>
 	<b>Телефон:</b> ' . $phone . '<br>
 	<b>Почта:</b> ' . $email . '<br>
-	<b>Способ связи:</b> ' . $messendger . '<br>
 	<b>Сообщение: </b> ' . $comment . '';
 
 if(!$mail->send()) {
