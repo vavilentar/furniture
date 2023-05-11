@@ -18,21 +18,21 @@
 			<div class="form-call">
 				<div>
 					<label>Имя <span>*</span></label>
-					<input type='text' name='username' required>
+					<input type='text' name="client-name" id="client-name" required>
 				</div>
 				<div>
 					<label>Номер телефона (с кодом) <span>*</span></label>
-					<input type='text' name='usernumber' required>
+					<input type="phone" name="client-phone" id="client-phone" required>
 				</div>
 				<div>
 					<label>Электронная почта</label>
-					<input type='email' name='usermail'>
+					<input type="mail" name="client-mail" id="client-mail">
 				</div>
 				<div>
 					<label>Сообщение</label>
-					<input type='text' name='question'>
+					<input name="client-request" id="client-request">
 				</div>
-				<input class="bot-send-mail" type='submit' value='Оставить заявку'>
+				<input id="callback-send" class="bot-send-mail" type='submit' value='Оставить заявку'>
 			</div>
 		</form>
 	</div>
@@ -337,6 +337,7 @@
 		</div>
 	</footer>
 
+	<script src="./js/jquery.js"></script>
 	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="./js/script.js"></script>
 </body>

@@ -39,15 +39,21 @@ const materialsApp = {
 Vue.createApp(categoriesApp).mount('#categories_app');
 Vue.createApp(materialsApp).mount('#materials_app');
 
+const callbackSendBtn = document.getElementById('callback-send');
+const callbackModal = document.getElementById('callback');
+
+// callbackSendBtn.addEventListener('click', () => {
+// 	document.querySelector('.form-call').style = 'text-align: center;'
+// 	document.querySelector('.form-call').innerHTML = `Спасибо за оставленную заявку! <br> Мы обязательно с Вами свяжемся!`
+// })
+
 const closeFormBtn = document.getElementById('close-form_btn').addEventListener('click', () => {
-	document.getElementById('callback').classList.add('callback-form_hidden');
-	formWrapper.classList.add('callback-form_hidden');
+	closeModal()
 })
 
 const formWrapper = document.getElementById('form-wrapper');
 // formWrapper.addEventListener('click', () => {
-// 	document.getElementById('callback').classList.add('callback-form_hidden');
-// 	formWrapper.classList.add('callback-form_hidden');
+	// closeModal()
 // })
 
 const categoriesBtns = document.querySelectorAll('.category-btn');
@@ -59,21 +65,50 @@ const materialShortBtn = document.getElementById('material_other').addEventListe
 
 const callbackShowBtns = document.querySelectorAll('.callback-show').forEach(btn => {
 	btn.addEventListener('click', () => {
-		document.getElementById('callback').classList.remove('callback-form_hidden')
-		formWrapper.classList.remove('callback-form_hidden');
+		openModal()
 	})
 })
 
 
-let selectedCategory = 0;
+// let selectedCategory = 0;
 
-function parseId(id) {
-	console.log(id)
-	return id.split('-')[1];
+// function parseId(id) {
+// 	console.log(id)
+// 	return id.split('-')[1];
+// }
+
+// categoriesBtns.forEach(btn => {
+// 	btn.addEventListener('click', (e) => {
+// 		selectedCategory = parseId(e.target.id);
+// 	})
+// })
+
+
+$('form').submit(function(e) {
+	e.preventDefault();
+	$.ajax({
+		type: "POST",
+		url: "../mailer/smart.php",
+		data: $(this).serialize()
+	}).done(function() {
+		$(this).find("input").val("");
+
+
+		$('form').trigger('reset');
+		document.querySelector('.form-call').style = 'text-align: center;'
+		document.querySelector('.form-call').innerHTML = `Спасибо за оставленную заявку! <br> Мы обязательно с Вами свяжемся!`
+		setTimeout(() => closeModal(), 3000);
+	});
+
+	return false;
+});
+
+function closeModal() {
+	callbackModal.classList.add('callback-form_hidden');
+	formWrapper.classList.add('callback-form_hidden');
 }
 
-categoriesBtns.forEach(btn => {
-	btn.addEventListener('click', (e) => {
-		selectedCategory = parseId(e.target.id);
-	})
-})
+function openModal() {
+	callbackModal.classList.remove('callback-form_hidden')
+	formWrapper.classList.remove('callback-form_hidden');
+}
