@@ -225,6 +225,7 @@ a:nth-child(2) {
 	grid-template-columns: .8fr .2fr;
 	height: 700px;
 	align-items: center;
+	padding: 0 25px;
 }
 
 .hero-block {
@@ -331,10 +332,18 @@ a:nth-child(2) {
 
 .features {
 	display: flex;
-	justify-content: space-evenly;
 	margin: 80px auto;
-	flex-wrap: wrap;
 	gap: 25px;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.feat-tabs {
+	display: flex;
+	gap: 25px;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .feat-tab {
@@ -644,7 +653,7 @@ a:nth-child(2) {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
-	padding: 20px 0;
+	padding: 20px;
 }
 
 .contacts a,
@@ -777,6 +786,12 @@ a:nth-child(2) {
 	line-height: 115%;
 	margin: 20px auto 80px auto;
 	transition: opacity 0.3s ease-in-out;
+	padding: 0 20px;
+	flex-wrap: wrap;
+}
+
+#material_other {
+	padding: 0 20px;
 }
 
 #material_other,
@@ -792,6 +807,7 @@ a:nth-child(2) {
 .subtitle {
 	font-size: 1.5em;
 	text-align: center;
+	padding: 0 20px;
 }
 
 .callback-form {
