@@ -78,6 +78,7 @@ header {
 	height: fit-content;
 	padding: 20px 0;
 	background-color: rgba(255, 255, 255, 0.8);
+
 }
 
 .navbar {
@@ -86,6 +87,7 @@ header {
 	align-items: center;
 	justify-items: center;
 	grid-template-columns: repeat(5, 1fr);
+
 }
 
 .navbar-item {
@@ -150,6 +152,7 @@ header {
 	width: 200px;
 	height: 40px;
 }
+
 .navbar-item:nth-child(4) {
 	gap: 15px;
 }
@@ -172,8 +175,7 @@ a:nth-child(2) {
 .navbar-item:nth-child(2):before,
 .navbar-item:nth-child(3):before,
 .navbar-item:nth-child(3):after,
-.navbar-item:nth-child(4)::after,
-.navbar-item:nth-child(5)::after {
+.navbar-item:nth-child(4)::after {
 	content: '';
 	position: absolute;
 	height: 70%;
@@ -691,6 +693,8 @@ a:nth-child(2) {
 	background: #FFFFFF;
 	box-shadow: 0px 4px 20px rgba(150, 150, 150, 0.25);
 	border-radius: 15px;
+
+	justify-content: center;
 }
 
 .quest p {
@@ -777,7 +781,8 @@ a:nth-child(2) {
 	transition: opacity 0.3s ease-in-out;
 }
 
-#material_other, #catalogue-link {
+#material_other,
+#catalogue-link {
 	font-size: 24px;
 	color: var(--main-color);
 }
@@ -789,4 +794,92 @@ a:nth-child(2) {
 .subtitle {
 	font-size: 1.5em;
 	text-align: center;
+}
+
+.callback-form {
+	width: 100%;
+	max-width: 350px;
+	border: 1px solid var(--main-black-color);
+	padding: 25px;
+	border-radius: 5px;
+	position: fixed;
+	background-color: white;
+	left: 50%;
+	top: 50%;
+	z-index: 10;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+.form-call {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
+	box-sizing: border-box;
+	row-gap: 10px;
+}
+
+.form-zvonok div {
+	padding: 15px 0;
+}
+
+.bot-send-mail {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.form-call label,
+.form-call input {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.form-call label {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-call input {
+	padding: 10px 15px;
+	margin-top: 10px;
+	border: 1px solid var(--main-black-color);
+	border-radius: 5px;
+}
+
+.form-call label span {
+	color: red;
+}
+
+.form-call .bot-send-mail {
+	font-family: 'Open Sans';
+	font-size: 18px;
+	padding: 15px;
+	margin-top: 10px;
+	background: none;
+	border: none;
+	color: #fff;
+	background-color: var(--main-color);
+	cursor: pointer;
+	border: 1px var(--main-black-color) solid;
+	border-radius: 5px;
+	transition: background-color .2s ease;
+}
+
+.form-call .bot-send-mail:hover {
+	background-color: var(--main-hover-color);
+}
+
+.callback-form_hidden {
+	display: none;
+}
+
+#form-wrapper {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(1,1,1,.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9;
 }

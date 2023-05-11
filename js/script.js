@@ -12,8 +12,7 @@ const categoriesApp = {
 const materialsApp = {
 	data() {
 		return {
-			materialsList: [
-				{
+			materialsList: [{
 					name: 'дуба',
 					descr: 'Дуб - это твердое и прочное древесное вещество, которое широко используется в производстве мебели. Он имеет высокую плотность и твердость, что делает его идеальным материалом для изготовления мебели, которая должна быть прочной и долговечной.'
 				},
@@ -40,12 +39,26 @@ const materialsApp = {
 Vue.createApp(categoriesApp).mount('#categories_app');
 Vue.createApp(materialsApp).mount('#materials_app');
 
+const formWrapper = document.getElementById('form-wrapper');
+formWrapper.addEventListener('click', () => {
+	document.getElementById('callback').classList.add('callback-form_hidden');
+	formWrapper.classList.add('callback-form_hidden');
+})
+
 const categoriesBtns = document.querySelectorAll('.category-btn');
 const categoriesItems = document.querySelectorAll('.categories_app-item');
 const materialShortBtn = document.getElementById('material_other').addEventListener('click', (e) => {
 	e.preventDefault();
 	document.querySelector('.materials-short ').classList.toggle('material-short_hidden');
 })
+
+const callbackShowBtns = document.querySelectorAll('.callback-show').forEach(btn => {
+	btn.addEventListener('click', () => {
+		document.getElementById('callback').classList.remove('callback-form_hidden')
+		formWrapper.classList.remove('callback-form_hidden');
+	})
+})
+
 
 let selectedCategory = 0;
 
@@ -59,4 +72,3 @@ categoriesBtns.forEach(btn => {
 		selectedCategory = parseId(e.target.id);
 	})
 })
-

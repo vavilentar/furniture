@@ -11,8 +11,32 @@
 </head>
 
 <body>
-	<header>
-		<div class="header">
+		<div id="form-wrapper">
+			<form id="callback" class="callback-form">
+				<div class="form-call">
+					<div>
+						<label>Имя <span>*</span></label>
+						<input type='text' name='username' required>
+					</div>
+					<div>
+						<label>Номер телефона (с кодом) <span>*</span></label>
+						<input type='text' name='usernumber' required>
+					</div>
+					<div>
+						<label>Электронная почта</label>
+						<input type='email' name='usermail'>
+					</div>
+					<div>
+						<label>Сообщение</label>
+						<input type='text' name='question'>
+					</div>
+					<input class="bot-send-mail" type='submit' value='Послать заявку'>
+				</div>
+			</form>
+		</div>
+
+		<header>
+			<div class="header">
 			<ul class="navbar navbar__container>
 				<li class=" navbar-item">
 				<div class="navbar-logotype">
@@ -24,7 +48,7 @@
 				</div>
 				</li>
 				<li class="navbar-item">
-					<a href="#" id="catalogue-link">Каталог</a>
+					<a href="#catalogue" id="catalogue-link">Каталог</a>
 				</li>
 				<li class="navbar-item">
 					<p>
@@ -38,15 +62,15 @@
 				<li class="navbar-item">
 					<a href="tel:+78612179376">+7 (8612) 17-93-76</a>
 					<a href="tel:+79892779430">+7 (989) 277-94-30</a>
-					<a href="#">Вам перезвонить?</a>
+					<a class="callback-show" href="#">Вам перезвонить?</a>
 				</li>
 			</ul>
 			<ul class="menu menu__container">
-				<li class="menu-link"><a href="#">Материалы</a></li>
-				<li class="menu-link"><a href="#">Наши работы</a></li>
-				<li class="menu-link"><a href="#">Как заказать</a></li>
+				<li class="menu-link"><a href="#materials_app">Материалы</a></li>
+				<li class="menu-link"><a href="#catalogue">Наши работы</a></li>
+				<li class="menu-link"><a href="#steps">Как заказать</a></li>
 				<li class="menu-link"><a href="#">Дизайнерам</a></li>
-				<li class="menu-link"><a href="#">Контакты</a></li>
+				<li class="menu-link"><a href="#contacts">Контакты</a></li>
 			</ul>
 		</div>
 		<section class="hero hero__container">
@@ -65,7 +89,7 @@
 				<form class="hero-feedback-form" action="#">
 					<h3>Расчет стоимости</h3>
 					<p>Мы свяжемся с Вами и расчитаем стоимость <br> Вашей <span>индивидуальной</span> мебели</p>
-					<button class="btn" type="submit">Оставить заявку</button>
+					<button class="btn callback-show" >Оставить заявку</button>
 				</form>
 			</div>
 		</section>
@@ -88,7 +112,7 @@
 				<p>Срок службы <br> 20 лет</p>
 			</div>
 		</section>
-		<section class="categories-wrapper">
+		<section id="catalogue" class="categories-wrapper">
 			<div class="categories categories__container">
 				<h2 class="title">Какую мебель <br> <span>мы производим?</span></h2>
 				<br><br><br>
@@ -167,7 +191,7 @@
 				</div>
 			</div>
 		</section> -->
-		<section class="steps-wrapper">
+		<section id="steps" class="steps-wrapper">
 			<div class="steps steps__container">
 				<h2 class="title">5 шагов к Вашей <br> <span>идеальной мебели</span></h2>
 				<div class="steps-tabs">
@@ -270,12 +294,15 @@
 				</div>
 			</div>
 		</section>
-		<section class="questions questions__container">
+		<section id="contacts" class="questions questions__container">
 			<h2 class="title">Остались вопросы? — <br> <span>С радостью ответим на них!</span></h2>
 			<div class="questions-block">
 				<div class="quest">
 					<img src="./icons/que1.svg" alt="">
 					<p>Отвечаем на звонки <br> с 9:00 до 21:00 <br> без выходных!</p>
+				</div>
+				<div class="quest">
+					<button class="btn callback-show">Оставьте заявку</button>
 				</div>
 				<div class="quest">
 					<img src="./icons/que3.svg" alt="">
