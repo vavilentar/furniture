@@ -24,7 +24,7 @@
 				</div>
 				</li>
 				<li class="navbar-item">
-					<button class="btn">Каталог</button>
+					<a href="#" id="catalogue-link">Каталог</a>
 				</li>
 				<li class="navbar-item">
 					<p>
@@ -32,8 +32,8 @@
 					</p>
 				</li>
 				<li class="navbar-item">
-					<a href="#">WhatsApp</a>
-					<a href="#">Telegram</a>
+					<a href="#"><img src="./icons/whatsapp.svg" alt=""></a>
+					<a href="#"><img src="./icons/telegram.svg" alt=""></a>
 				</li>
 				<li class="navbar-item">
 					<a href="tel:+78612179376">+7 (8612) 17-93-76</a>
@@ -51,8 +51,9 @@
 		</div>
 		<section class="hero hero__container">
 			<div class="hero-block">
-				<h1 class="title">Мебель на заказ <br> <span>в Москве и МО</span></h1>
-				<h2 class="hero-descr">Изготовление мебели и <br> <span>дизайнерских проектов</span></h2>
+				<h1 class="title">Изготовление мебели на заказ <br> <span>и по дизайнерским проектам</span></h1>
+				<!-- <h1 class="title">Мебель на заказ <br> <span>в Москве и МО</span></h1> -->
+				<!-- <h2 class="hero-descr">Изготовление мебели и <br> <span>дизайнерских проектов</span></h2> -->
 				<div class="hero-info">
 					<div class="hero-info-item">
 						<img src="./icons/cash.svg" alt="">
@@ -121,7 +122,7 @@
 				создавать мебель, которая будет радовать вас своей красотой и функциональностью на протяжении многих
 				лет.</p>
 			<div class="materials">
-				<div v-for="(item, index) in materialsList"  class="materials-item" >
+				<div v-for="(item, index) in materialsList" class="materials-item">
 					<div class="material-name">
 						<h3>Мебель из <br> {{ item.name }}</h3>
 					</div>
@@ -130,9 +131,9 @@
 					</div>
 				</div>
 			</div>
-			<button class="btn">И другие...</button>
-			<div class="materials-short">
-				<p v-for="item in materialsListShort" >{{ item }}</p>
+			<a href="#" id="material_other">И другие...</a>
+			<div class="materials-short material-short_hidden">
+				<p v-for="item in materialsListShort">{{ item }}</p>
 			</div>
 
 		</section>
@@ -299,8 +300,10 @@
 					<h2>Индвидуальная мебель на заказ</h2>
 					<h4>Контакты:</h4>
 					<a href="tel:+79224865191">+7 (922) 486-5191</a>
-					<a href="#">WhatsApp</a>
-					<a href="#">Telegram</a>
+					<div class="social-footer">
+						<a href="#"><img src="./icons/whatsapp.svg" alt=""></a>
+						<a href="#"><img src="./icons/telegram.svg" alt=""></a>
+					</div>
 					<a href="mailto:jondricka@gmail.com">jondricka@gmail.com</a>
 					<p><span>Режим работы:</span> ежедневно с 11-00 до 20-00</p>
 				</div>

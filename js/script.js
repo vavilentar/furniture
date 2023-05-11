@@ -42,6 +42,10 @@ Vue.createApp(materialsApp).mount('#materials_app');
 
 const categoriesBtns = document.querySelectorAll('.category-btn');
 const categoriesItems = document.querySelectorAll('.categories_app-item');
+const materialShortBtn = document.getElementById('material_other').addEventListener('click', (e) => {
+	e.preventDefault();
+	document.querySelector('.materials-short ').classList.toggle('material-short_hidden');
+})
 
 let selectedCategory = 0;
 
